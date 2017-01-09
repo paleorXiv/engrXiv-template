@@ -10,6 +10,7 @@
 \usepackage[parfill]{parskip}
 \renewcommand*\oldstylenums[1]{\carlitoOsF #1}
 \usepackage{fancyhdr}
+\usepackage{natbib}
 \setlength{\headheight}{41pt} 
 
 %% Sets page size and margins
@@ -96,9 +97,9 @@ You can make lists with automatic numbering \dots
 \end{itemize}
 
 \subsection{Inserting Citations}
-Citations can be inserted using standard latex formatting by called the identifier in the .bib file. Like this \cite{einstein1935can}.
+Citations can be inserted using standard latex formatting by called the identifier in the .bib file. Like this \citep{einstein1935can}.
 
-\bibliographystyle{apalike}
+\bibliographystyle{apalike-refs}
 \bibliography{sample}
 
 \end{document}
