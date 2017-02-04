@@ -27,6 +27,8 @@
 %% Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{booktabs}
+
 \usepackage[colorinlistoftodos]{todonotes}
 
 
@@ -77,10 +79,13 @@ Use the table and tabular commands for basic tables --- see Table~\ref{tab:widge
 
 \begin{table}
 \centering
-\begin{tabular}{l|r}
-Item & Quantity \\\hline
+\begin{tabular}{@{}l l@{}}
+\toprule
+Item & Quantity \\
+\midrule
 Widgets & 42 \\
-Gadgets & 13
+Gadgets & 13 \\
+\bottomrule
 \end{tabular}
 \caption{\label{tab:widgets}An example table.}
 \end{table}
