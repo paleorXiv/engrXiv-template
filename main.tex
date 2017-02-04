@@ -1,18 +1,25 @@
 \documentclass[a4paper]{article}
 
 %% Language and font encodings
-\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\urlstyle{tt}
+\newcommand{\email}[1]{\href{mailto:#1}{\tt{\nolinkurl{#1}}}}
+\newcommand{\orcid}[1]{ORCID: \href{https://orcid.org/#1}{\tt{\nolinkurl{#1}}}}
+
 \usepackage[sfdefault,lf]{carlito}
 %% The 'lf' option for lining figures
 %% The 'sfdefault' option to make the base font sans serif
-\usepackage[T1]{fontenc}
 \usepackage[parfill]{parskip}
 \renewcommand*\oldstylenums[1]{\carlitoOsF #1}
 \usepackage{fancyhdr}
 \usepackage{natbib}
 \usepackage{authblk}
-\setlength{\headheight}{41pt} 
+\setlength{\headheight}{41pt}
 
 %% Sets page size and margins
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
@@ -21,7 +28,10 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+
+
+
 %\renewcommand{\headrulewidth}{0pt}
 \fancyhead[L]{Posted: \today}
 \fancyhead[R]{
@@ -30,9 +40,10 @@
 \pagestyle{plain}
 \title{Your Paper}
 \author[1]{Jane A. Author}
-\author[2]{Jim B. Author}
-\affil[1]{Department of Earth; ORCID: 0000-0000-0000-0000}
-\affil[2]{World Institute; ORCID: 1111-1111-1111-1111}
+\author[2,*]{Jim B. Author}
+\affil[1]{Department of Earth; \orcid{0000-0000-0000-0000}}
+\affil[2]{World Institute; \orcid{1111-1111-1111-1111}}
+\affil[*]{Corresponding author: \email{author@university.edu}}
 \date{}
 
 \begin{document}
@@ -45,7 +56,7 @@ Your abstract.
 
 \section{Introduction}
 
-Your introduction goes here! 
+Your introduction goes here!
 
 \section{Some examples to get started}
 
@@ -62,7 +73,7 @@ First you have to make sure image file is located somewhere you can find it. If 
 
 \subsection{How to add Tables}
 
-Use the table and tabular commands for basic tables --- see Table~\ref{tab:widgets}, for example. 
+Use the table and tabular commands for basic tables --- see Table~\ref{tab:widgets}, for example.
 
 \begin{table}
 \centering
